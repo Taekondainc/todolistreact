@@ -1,0 +1,27 @@
+export default function App() {
+  const name = 'johndoe';
+  const x = 10;
+  const y = 10;
+  const names = ['brad', 'mary', 'joe', 'sarama'];
+  const loged = true;
+  const logged = false;
+  const styles = {
+    color: 'blue',
+    fontSize: '24px',
+    fontWeight: 'bold',
+  }
+  return (
+    <>
+      <div style={{color:'red'}} className=" font-semibold text-7xl">{name}</div>
+      <p>total : {x + y}</p>
+      <ul>
+        {names.map((name, index) => (
+          <li style={styles} key={index}>{name}</li>
+        ))}
+      </ul>
+      {loged ? <div>yes</div> : <div>no</div>}
+      
+      {logged &&  <div>yes</div>  }
+    </>
+  )
+}
